@@ -1,6 +1,9 @@
 @Smoke
 Feature: Login Functionality
 
+  Background:
+    Given Login Page is present
+
   Scenario: Valid Login
     When I enter username and password
     And I click on login button

@@ -4,11 +4,20 @@ import gmail.fatihmergunqa.utils.Commons;
 import gmail.fatihmergunqa.utils.Configs;
 import gmail.fatihmergunqa.utils.Constants;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
 public class LoginFunctionalityAndValidation extends Commons {
+    @Given("Login Page is present")
+    public void loginPageIsPresent() {
+        Assert.assertTrue(loginPage.loginPageLogo.isDisplayed());
+        Assert.assertTrue(loginPage.username.isDisplayed());
+        Assert.assertTrue(loginPage.password.isDisplayed());
+        Assert.assertTrue(loginPage.loginButton.isDisplayed());
+    }
+
     @When("I enter username and password")
     public void iEnterUsernameAndPassword() {
         Configs.readProperties(Constants.CONFIGURATION_FILEPATH);
