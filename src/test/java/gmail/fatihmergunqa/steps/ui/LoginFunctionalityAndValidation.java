@@ -8,7 +8,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
-public class Register extends Commons {
+public class LoginFunctionalityAndValidation extends Commons {
     @When("I enter username and password")
     public void iEnterUsernameAndPassword() {
         Configs.readProperties(Constants.CONFIGURATION_FILEPATH);
@@ -23,7 +23,9 @@ public class Register extends Commons {
 
     @Then("I should be logged in")
     public void iShouldBeLoggedIn() {
-        Assert.assertTrue(mainPage.mainPageLogo.isDisplayed());
+        Assert.assertTrue("Logo is not displayed!", mainPage.mainPageLogo.isDisplayed());
+        Assert.assertTrue("Announcement section is not visible!", mainPage.announcementsSection.isDisplayed());
+        Assert.assertTrue("URL does not end with 'MainPage.aspx'", driver.getCurrentUrl().endsWith("MainPage.aspx"));
     }
 
     @When("I enter invalid {string} and {string}")
