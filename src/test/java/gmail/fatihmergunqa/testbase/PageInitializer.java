@@ -1,7 +1,7 @@
 package gmail.fatihmergunqa.testbase;
 
-import gmail.fatihmergunqa.pages.IndexPage;
 import gmail.fatihmergunqa.pages.LoginPage;
+import gmail.fatihmergunqa.pages.MainPage;
 
 /**
  * PageInitializer class responsible for initializing page element objects.
@@ -9,14 +9,14 @@ import gmail.fatihmergunqa.pages.LoginPage;
  */
 public class PageInitializer extends Base {
     // Page element instances
-    public static IndexPage indexPage;
     public static LoginPage loginPage;
+    public static MainPage mainPage;
 
     /**
      * Initializes the page elements by creating new instances of the corresponding page element classes.
      */
     public static void initialize() {
-        indexPage = new IndexPage(); // Initialize IndexPage instance
         loginPage = new LoginPage(); // Initialize LoginPage instance
+        mainPage = new MainPage();
     }
 }

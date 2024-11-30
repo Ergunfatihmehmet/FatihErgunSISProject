@@ -6,22 +6,13 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
-    @FindBy(xpath = "//input[@data-qa='signup-name']")
-    public WebElement signupName;
+    @FindBy(id = "tUsername")
+    public WebElement username;
 
-    @FindBy(xpath = "//input[@data-qa='signup-email']")
-    public WebElement signupEmail;
+    @FindBy(id = "tPassword")
+    public WebElement password;
 
-    @FindBy(xpath = "//button[@data-qa='signup-button']")
-    public WebElement signupButton;
-
-    @FindBy(xpath = "//input[@data-qa='login-name']")
-    public WebElement loginName;
-
-    @FindBy(xpath = "//input[@data-qa='login-email']")
-    public WebElement loginEmail;
-
-    @FindBy(xpath = "//button[@data-qa='login-button']")
+    @FindBy(id = "bLogin")
     public WebElement loginButton;
 
     public LoginPage() {

@@ -1,9 +1,20 @@
 @Smoke
-Feature: Register Functionality
+Feature: Login Functionality
 
-  Scenario: Register
-    Given Navigated to Signup Page
-    And Enter Name
-    And Enter Email
-    And Click Signup
-    Then Observe Results
+  Scenario: Valid Login
+    When I enter username and password
+    And I click on login button
+    Then I should be logged in
+
+  Scenario Outline: Invalid Login
+    When I enter invalid "<username>" and "<password>"
+    And I click on login button
+    Then I shouldn't be able to login
+
+    Examples:
+      | username       | password       |
+      | RandomUsername | RandomPassword |
+      | RandomUsername | Neotech@123    |
+      | Admin          | RandomPassword |
+      | Admin          |                |
+      |                | Neotech@123    |

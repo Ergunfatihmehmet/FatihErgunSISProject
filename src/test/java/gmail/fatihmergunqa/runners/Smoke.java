@@ -13,6 +13,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features", // Path to the feature files
         glue = "com.fatihergun.steps", // Package containing step definitions
         tags = "@Smoke", // Tag to filter which scenarios to run
+        dryRun = true, // Dry Run to get steps codes
 
         plugin = {
                 // Prints the Gherkin scenario seleniumsteps to the console

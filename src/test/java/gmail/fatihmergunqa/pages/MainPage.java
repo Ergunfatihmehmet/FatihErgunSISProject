@@ -5,11 +5,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class IndexPage {
-    @FindBy(xpath = "//a[@href='/login']")
-    public WebElement signupPage;
+public class MainPage {
+    @FindBy(id = "Header1_imgSchoolLogo")
+    public WebElement mainPageLogo;
 
-    public IndexPage() {
+    public MainPage() {
         PageFactory.initElements(Base.driver, this);
     }
 }
