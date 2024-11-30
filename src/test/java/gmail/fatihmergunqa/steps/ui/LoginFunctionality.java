@@ -9,7 +9,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
-public class LoginFunctionalityAndValidation extends Commons {
+public class LoginFunctionality extends Commons {
     @Given("Login Page is present")
     public void loginPageIsPresent() {
         Assert.assertTrue(loginPage.loginPageLogo.isDisplayed());
